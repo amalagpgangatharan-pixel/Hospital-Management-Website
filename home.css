@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f9ff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-img {
+  width: 30%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  animation: floatMove 3s ease-in-out infinite;
+}
+
+/* ANIMATION */
+@keyframes floatMove {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/* BUTTON */
+.hero .btn {
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  transform: scale(1.05);
+}
+
+/*CARDS*/
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+/* SERVICE CARDS */
+.service-card {
+  background: white;
+  padding: 25px;
+  border: 2px solid #0077b6;
+  width: 200px;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: #caf0f8;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* FOOTER */
+.footer {
+  background: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 80%;
+  }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | City Hospital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Public Hospital</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTACT -->
+<section class="contact d-flex justify-content-center align-items-center vh-100">
+  
+  <form class="p-4 shadow rounded bg-white" style="width: 350px;">
+    
+    <h4 class="text-center mb-3">Contact Us</h4>
+
+    <input type="text" class="form-control mb-3" placeholder="Name" required>
+    
+    <input type="email" class="form-control mb-3" placeholder="Email" required>
+    
+    <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
+    
+    <button type="submit" class="btn btn-primary w-100">Send</button>
+
+    <!-- MESSAGE -->
+    <div class="alert alert-success mt-3 text-center d-none" id="msg">
+      Message sent successfully!
+    </div>
+
+  </form>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-primary text-white text-center p-3">
+  <p class="mb-0">© 2026 Public Hospital | Designed by Amalagp</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const form = document.querySelector("form");
+  const msg = document.getElementById("msg");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    msg.classList.remove("d-none");
+
+    setTimeout(() => {
+      msg.classList.add("d-none");
+      form.reset();
+    }, 2000);
+  });
+</script>
+
+</body>
+</html>

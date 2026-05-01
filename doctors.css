@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f9ff;
+}
+
+/* TITLE */
+h2 {
+  color: #0077b6;
+}
+
+/* CARD */
+.doctor-card {
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+/* HOVER */
+.doctor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  background: #eaf6ff;
+}
+
+/* IMAGE */
+.doctor-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* NAME */
+.doctor-card h5 {
+  color: #0077b6;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+/* SPECIALIZATION */
+.doctor-card p {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* TIMING */
+.doctor-card span {
+  font-size: 14px;
+  color: #777;
+}
+
+/* BUTTON */
+.book-btn {
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  transform: scale(1.05);
+}
+
+/* CLICK */
+.doctor-card:active {
+  transform: scale(0.98);
+}
+
+/* MESSAGE */
+#msg {
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .doctor-card img {
+    height: 120px;
+  }
+}
